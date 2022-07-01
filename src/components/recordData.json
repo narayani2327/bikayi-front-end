@@ -1,6 +1,5 @@
-{
-    "prizes":[
-       {
+[
+      {
           "year":"2021",
           "category":"chemistry",
           "laureates":[
@@ -10703,5 +10702,4 @@
              }
           ]
        }
-    ]
- }
+   ]
