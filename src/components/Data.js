@@ -37,37 +37,18 @@ class Data extends Component {
         super(props);
     }
     render() {
-        // return (<div >
-        //     <ul>
-        //         {data.map((record, i) => 
-        //             <li key={i}>
-        //                 {record.year} - {record.category}
-        //                 {/* <ol>
-        //                     {record.laureates.map((laureates,j)=>
-        //                         <li key={j}>{laureates.firstname}</li>    
-        //                     )}
-        //                 </ol> */}
-        //             </li>
-        //         )}
-        //     </ul>
-        // </div>
-        // );
         return (
-            <div>
+            <div className='data'>
                 {data.map((item) => {
                 return (
-                    <>
-                        <ul>
-                            <li>
-                                {item.year} - {item.category} 
-                                <ul>
-                                    {item.laureates?.map((sub)=>
-                                        <li>{sub.firstname} - {sub.surname} - {sub.motivation}</li>
-                                    )}
-                                </ul>
-                            </li>
-                        </ul>
-                    </>
+                    <div id={item.year}>
+                        <h3 id={item.category}>{item.year} - {item.category} </h3>
+                            <div>
+                                {item.laureates?.map((sub)=>
+                                    <div className='person'><h4>{sub.firstname} {sub.surname}</h4><blockquote><b>Motivation: </b>{sub.motivation}</blockquote></div>
+                                )}
+                            </div>
+                    </div>
                 );
                 })}
             </div>

@@ -1,82 +1,53 @@
 import React, { Component } from 'react'
 export default class Navbar extends Component {
+    searchOption=()=>{
+        // year=document.querySelector(".year").value
+        // category=document.querySelector(".category").value
+        document.getElementById('document.querySelector(".year").value document.querySelector(".category").value').scrollIntoView({
+            behavior: 'smooth'
+        });
+    };
     render() {
+        window.onload =()=>{
+            var ddlYears = document.getElementById("year");
+            for (var i = 1900; i <= 2018; i++) {
+                var option = document.createElement("OPTION");
+                option.innerHTML = i;
+                option.value = i;
+                ddlYears.appendChild(option);
+            }
+        };
         return (
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    Navbar
+                    Nobel Prize Winners
                 </a>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">
-                        Home
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">
-                        Link
-                        </a>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a
-                        className="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        >
-                        Dropdown
-                        </a>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a className="dropdown-item" href="#">
-                            Action
-                            </a>
-                        </li>
-                        <li>
-                            <a className="dropdown-item" href="#">
-                            Another action
-                            </a>
-                        </li>
-                        <li>
-                            <hr className="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a className="dropdown-item" href="#">
-                            Something else here
-                            </a>
-                        </li>
-                        </ul>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled">Disabled</a>
-                    </li>
-                    </ul>
-                    <form className="d-flex" role="search">
-                    <input
-                        className="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                    />
-                    <button className="btn btn-outline-success" type="submit">
-                        Search
-                    </button>
-                    </form>
+                <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                    <div className="d-flex">
+                        <select 
+                            className="form-control me-2"
+                            id="year"
+                            placeholder="Year"
+                            >
+                            <option>Year</option>
+                        </select>
+                        <select 
+                            className="form-control me-2"
+                            id="category"
+                            placeholder="Category"
+                            >
+                            <option disabled>Category</option>
+                            <option>Chemistry</option>
+                            <option>Medicine</option>
+                            <option>Economics</option>
+                            <option>Peace</option>
+                            <option>Physics</option>
+                        </select>
+                        <button className="btn btn-outline-success" onClick={this.searchOption}>
+                            Search
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
