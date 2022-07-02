@@ -7,6 +7,7 @@ function App() {
       <Navbar/>
       <BackGround/>
       <Data/>
+      <h6 className="name">&#169;Narayani H <br></br>The National Institute of Engineering,  Mysore</h6>
     </div>
   );
 }
