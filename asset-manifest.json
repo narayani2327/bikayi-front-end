@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/bikayi-front-end/static/css/main.10643abf.css",
-    "main.js": "/bikayi-front-end/static/js/main.2743406a.js",
+    "main.css": "/bikayi-front-end/static/css/main.a09c101a.css",
+    "main.js": "/bikayi-front-end/static/js/main.e11fc190.js",
     "static/media/logo.png": "/bikayi-front-end/static/media/logo.4457302b553d8ded2d0f.png",
     "index.html": "/bikayi-front-end/index.html",
-    "main.10643abf.css.map": "/bikayi-front-end/static/css/main.10643abf.css.map",
-    "main.2743406a.js.map": "/bikayi-front-end/static/js/main.2743406a.js.map"
+    "main.a09c101a.css.map": "/bikayi-front-end/static/css/main.a09c101a.css.map",
+    "main.e11fc190.js.map": "/bikayi-front-end/static/js/main.e11fc190.js.map"
   },
   "entrypoints": [
-    "static/css/main.10643abf.css",
-    "static/js/main.2743406a.js"
+    "static/css/main.a09c101a.css",
+    "static/js/main.e11fc190.js"
   ]
 }
